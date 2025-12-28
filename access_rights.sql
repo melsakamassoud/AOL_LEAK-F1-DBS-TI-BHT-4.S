@@ -1,0 +1,11 @@
+-- Source - https://stackoverflow.com/a/18193568
+-- Posted by sealz, modified by community. See post 'Timeline' for change history
+-- Retrieved 2025-12-21, License - CC BY-SA 3.0
+
+GRANT SELECT ON aol_leak, enthaelt_f1_begriff, f1_filtered, f1_liefert, f1_query, f1_rennen, f1_stellt, f1_user, f1_website, faehrt_fuer, faehrt_in, fahrer, fahrer_wird_erwaehnt, findet_statt_auf, liefert, query, stellt, strecke, strecke_wird_erwaehnt, team, team_wird_erwaehnt, "user", website TO PUBLIC;
+GRANT INSERT ON aol_leak, enthaelt_f1_begriff, f1_filtered, f1_liefert, f1_query, f1_rennen, f1_stellt, f1_user, f1_website, faehrt_fuer, faehrt_in, fahrer, fahrer_wird_erwaehnt, findet_statt_auf, liefert, query, stellt, strecke, strecke_wird_erwaehnt, team, team_wird_erwaehnt, "user", website TO PUBLIC;
+GRANT UPDATE ON aol_leak, enthaelt_f1_begriff, f1_filtered, f1_liefert, f1_query, f1_rennen, f1_stellt, f1_user, f1_website, faehrt_fuer, faehrt_in, fahrer, fahrer_wird_erwaehnt, findet_statt_auf, liefert, query, stellt, strecke, strecke_wird_erwaehnt, team, team_wird_erwaehnt, "user", website TO PUBLIC;
+GRANT DELETE ON aol_leak, enthaelt_f1_begriff, f1_filtered, f1_liefert, f1_query, f1_rennen, f1_stellt, f1_user, f1_website, faehrt_fuer, faehrt_in, fahrer, fahrer_wird_erwaehnt, findet_statt_auf, liefert, query, stellt, strecke, strecke_wird_erwaehnt, team, team_wird_erwaehnt, "user", website TO PUBLIC;
+GRANT TRUNCATE ON aol_leak, enthaelt_f1_begriff, f1_filtered, f1_liefert, f1_query, f1_rennen, f1_stellt, f1_user, f1_website, faehrt_fuer, faehrt_in, fahrer, fahrer_wird_erwaehnt, findet_statt_auf, liefert, query, stellt, strecke, strecke_wird_erwaehnt, team, team_wird_erwaehnt, "user", website TO PUBLIC;
+GRANT REFERENCES ON aol_leak, enthaelt_f1_begriff, f1_filtered, f1_liefert, f1_query, f1_rennen, f1_stellt, f1_user, f1_website, faehrt_fuer, faehrt_in, fahrer, fahrer_wird_erwaehnt, findet_statt_auf, liefert, query, stellt, strecke, strecke_wird_erwaehnt, team, team_wird_erwaehnt, "user", website TO PUBLIC;
+GRANT TRIGGER ON aol_leak, enthaelt_f1_begriff, f1_filtered, f1_liefert, f1_query, f1_rennen, f1_stellt, f1_user, f1_website, faehrt_fuer, faehrt_in, fahrer, fahrer_wird_erwaehnt, findet_statt_auf, liefert, query, stellt, strecke, strecke_wird_erwaehnt, team, team_wird_erwaehnt, "user", website TO PUBLIC;
