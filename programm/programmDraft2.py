@@ -2,7 +2,7 @@ import psycopg2
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
+# Konfigurationsdaten für die Session
 def connect_to_db():
     print("=== Database connection ===")
     host = input("Host: ")
@@ -11,6 +11,7 @@ def connect_to_db():
     user = input("User: ")
     password = input("Password: ")
 
+# Verbindung aufbauen
     try:
         conn = psycopg2.connect(
             host=host,
@@ -27,19 +28,22 @@ def connect_to_db():
         print(e)
         return None
 
-
+# run_query_loop - Programmschleife
+# Query Eingabe und Abschicken und Empfangen
 def run_query_loop(conn):
     print("=== SQL Query Mode ===")
     print("Enter SQL queries.")
     print("Type 'exit' to quit.\n")
 
     while True:
+        # Query input - raus mit exit
         sql = input("SQL> ")
 
         if sql.lower() == "exit":
             break
 
         try:
+            # Query an Cloud SQL Instanz ueber conn mit pd (pandas)
             df = pd.read_sql(sql, conn)
 
             if df.empty:
@@ -54,7 +58,7 @@ def run_query_loop(conn):
             print("❌ Query failed:")
             print(e, "\n")
 
-
+# visualize Funktion
 def visualize(df):
     """
     Very simple automatic visualization:
@@ -81,13 +85,15 @@ def visualize(df):
 
 def main():
     conn = None
+    # versuch solange zu connecten wie geht
     while conn is None:
         conn = connect_to_db()
 
+    # Mache SQL-Anfragen und visualize solange kein exit vom user
     run_query_loop(conn)
     conn.close()
     print("Connection closed. Bye!")
 
-
 if __name__ == "__main__":
     main()
+
