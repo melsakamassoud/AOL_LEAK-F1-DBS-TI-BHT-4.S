@@ -2,7 +2,7 @@ SELECT
     f.fahrer_id,
     f.name AS fahrer_name,
     t.name AS team_name,
-    COUNT(sub.f_id) AS anzahl_suchen -- Zählt nur die tatsächlichen Treffer
+    COUNT(sub.f_id) AS anzahl_suchen 
 FROM fahrer f
 JOIN team t ON f.team_id = t.team_id
 LEFT JOIN (
@@ -49,4 +49,5 @@ LEFT JOIN (
     FROM f1_query
 ) AS sub ON f.fahrer_id = sub.f_id
 GROUP BY f.fahrer_id, f.name, t.name
+
 ORDER BY anzahl_suchen DESC, f.name ASC;
