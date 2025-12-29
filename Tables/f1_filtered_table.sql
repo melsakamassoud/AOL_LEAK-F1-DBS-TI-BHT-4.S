@@ -4,7 +4,7 @@ SELECT *
 FROM aol_leak
 WHERE (
       -- Strong F1-only keywords (safe)
-      QUERY ILIKE '%f1%'
+      QUERY ILIKE '% f1 %'
    OR QUERY ILIKE '% GP %'
    OR QUERY ILIKE '%rennen%'
    OR QUERY ILIKE '%pitstop%'
