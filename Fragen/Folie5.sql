@@ -1,3 +1,5 @@
+-- Welche Rennfahrer Namen wurden am meisten gesucht?
+
 SELECT 
     f.fahrer_id,
     f.name AS fahrer_name,
@@ -51,3 +53,4 @@ LEFT JOIN (
 GROUP BY f.fahrer_id, f.name, t.name
 
 ORDER BY anzahl_suchen DESC, f.name ASC;
+
