@@ -9,11 +9,11 @@ LEFT JOIN (
     SELECT 
         CASE 
             -- Renault
-            WHEN query_text ILIKE '%Mild Seven Renault F1 Team%' 
+            WHEN query_text ILIKE '%Mild%Seven%Renault%F1%Team%' 
               OR query_text ILIKE '%Renault%F1%Team%' 
               OR query_text ILIKE '%F1%Renault%Team%'
-              OR query_text ILIKE '%Renault F1%' 
-              OR query_text ILIKE '%F1 %Renault%'
+              OR query_text ILIKE '%Renault%F1%' 
+              OR query_text ILIKE '%F1%Renault%'
               OR query_text ILIKE '%Mild Seven%' THEN 1
 
             -- McLaren
@@ -54,23 +54,23 @@ LEFT JOIN (
               OR query_text ILIKE '%F1 %Red Bull%' THEN 7
 
             -- BMW Sauber
-            WHEN query_text ILIKE '%BMW Sauber F1 Team%' 
-              OR query_text ILIKE '%BMW Sauber%' 
-              OR query_text ILIKE '%Sauber F1%'
-              OR query_text ILIKE '%F1 %Sauber%'
-              OR query_text ILIKE '%BMW F1%'
-              OR query_text ILIKE '%F1 % BMW%' THEN 8
+            WHEN query_text ILIKE '%BMW%Sauber%F1%Team%' 
+              OR query_text ILIKE '%BMW%Sauber%' 
+              OR query_text ILIKE '%Sauber%F1%'
+              OR query_text ILIKE '%F1%Sauber%'
+              OR query_text ILIKE '%BMW%F1%'
+              OR query_text ILIKE '%F1%BMW%' THEN 8
 
             -- Midland & Spyker (Beide auf ID 9)
-            WHEN query_text ILIKE '%Spyker MF1 Team%'
-              OR query_text ILIKE '%Spyker MF1%'
-              OR query_text ILIKE '%Spyker F1 %'
-              OR query_text ILIKE '% F1 %Spyker%'
-              OR query_text ILIKE '%MF1 Racing%' 
-              OR query_text ILIKE '%Midland F1 Racing%'
-              OR query_text ILIKE '%Midland F1 %'
-              OR query_text ILIKE '%F1 %Midland%'
-              OR query_text ILIKE '%Midland % Racing%' THEN 9
+            WHEN query_text ILIKE '%Spyker%MF1%Team%'
+              OR query_text ILIKE '%Spyker%MF1%'
+              OR query_text ILIKE '%SpykerF1%'
+              OR query_text ILIKE '%F1%Spyker%'
+              OR query_text ILIKE '%MF1%Racing%' 
+              OR query_text ILIKE '%Midland%F1%Racing%'
+              OR query_text ILIKE '%Midland%F1%'
+              OR query_text ILIKE '%F1%Midland%'
+              OR query_text ILIKE '%Midland%%Racing%' THEN 9
 
             -- Toro Rosso
             WHEN query_text ILIKE '%Scuderia Toro Rosso%'
