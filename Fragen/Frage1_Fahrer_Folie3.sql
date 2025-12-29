@@ -1,3 +1,5 @@
+-- Welche Teams bzw. Rennfahrer waren zu der Zeit aktiv?
+
 SELECT 
     f.fahrer_id,
     f.name AS fahrer_name,
@@ -52,4 +54,5 @@ LEFT JOIN (
     FROM f1_query
 ) AS sub ON f.fahrer_id = sub.f_id
 GROUP BY f.fahrer_id, f.name, t.name
+
 ORDER BY wurde_erwaehnt ASC, f.name ASC;
