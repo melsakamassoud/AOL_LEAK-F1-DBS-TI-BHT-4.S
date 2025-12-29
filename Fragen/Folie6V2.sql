@@ -1,3 +1,5 @@
+-- Nach welchem Team wurde am öftesten gesucht?
+
 SELECT 
     t.team_id,
     t.name AS team_name,
@@ -87,4 +89,5 @@ LEFT JOIN (
     FROM f1_query
 ) AS sub ON t.team_id = sub.t_id
 GROUP BY t.team_id, t.name
+
 ORDER BY anzahl_suchen DESC;
