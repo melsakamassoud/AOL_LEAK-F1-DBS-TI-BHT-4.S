@@ -1,3 +1,5 @@
+-- Welche Muster/Wörter treten bei Formel-1 - Anfragen besonders häufig auf?
+
 SELECT 
     word1 || ' ' || word2 || ' ' || word3 || ' ' || word4 AS wort_muster, 
     COUNT(*) AS anzahl
@@ -20,4 +22,5 @@ FROM (
 WHERE word4 IS NOT NULL
 GROUP BY wort_muster
 ORDER BY anzahl DESC
+
 LIMIT 20;
