@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS f1_filtered;
+DROP TABLE IF EXISTS f1_filtered CASCADE;
 CREATE TABLE f1_filtered as
 SELECT *
 FROM aol_leak

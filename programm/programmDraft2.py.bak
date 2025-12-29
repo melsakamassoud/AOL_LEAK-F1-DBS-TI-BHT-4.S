@@ -80,10 +80,10 @@ def visualize(df):
     print("\nChart types:")
     print("1: Bar chart")
     print("2: Line chart")
-    print("3: Pie chart")
 
-    chart_type = input("Select chart type (1/2/3): ")
+    chart_type = input("Select chart type (1/2): ")
 
+    # Select X column
     x_idx = input("Select X column (number): ")
     y_idx = input("Select Y column (number): ")
 
@@ -94,40 +94,20 @@ def visualize(df):
         print("❌ Invalid column selection\n")
         return
 
-    # Pie chart requires numeric values
-    if chart_type == "3" and not pd.api.types.is_numeric_dtype(df[y_col]):
-        print("❌ Pie chart requires numeric Y column\n")
-        return
-
     plt.figure(figsize=(8, 5))
 
     if chart_type == "1":
         plt.bar(df[x_col].astype(str), df[y_col])
-        plt.xlabel(x_col)
-        plt.ylabel(y_col)
-        plt.title(f"{y_col} by {x_col}")
-        plt.xticks(rotation=45)
-
     elif chart_type == "2":
         plt.plot(df[x_col], df[y_col], marker="o")
-        plt.xlabel(x_col)
-        plt.ylabel(y_col)
-        plt.title(f"{y_col} over {x_col}")
-
-    elif chart_type == "3":
-        plt.pie(
-            df[y_col],
-            labels=df[x_col].astype(str),
-            autopct="%1.1f%%",
-            startangle=90
-        )
-        plt.title(f"{y_col} distribution")
-        plt.axis("equal")  # makes it a circle
-
     else:
         print("❌ Invalid chart type\n")
         return
 
+    plt.xlabel(x_col)
+    plt.ylabel(y_col)
+    plt.title(f"{y_col} vs {x_col}")
+    plt.xticks(rotation=45)
     plt.tight_layout()
     plt.show()
     print()
