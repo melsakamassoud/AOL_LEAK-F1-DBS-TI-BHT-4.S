@@ -1,4 +1,4 @@
--- Welche Webseiten wurden bei Formel-1-Anfragen angeklickt?
+-- Welche Teams bzw. Rennfahrer waren zu der Zeit aktiv?
 
 SELECT 
     t.name AS team_name,
@@ -71,3 +71,4 @@ LEFT JOIN (
 GROUP BY t.team_id, t.name
 
 ORDER BY wurde_erwaehnt ASC, t.name ASC;
+
