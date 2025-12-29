@@ -20,6 +20,7 @@ WHERE (
    OR QUERY ILIKE '%fastest lap%'
    OR QUERY ILIKE '%silverstone circuit%'
    OR QUERY ILIKE '%monaco grand prix%'
+   OR QUERY ILIKE '%indianapolis%speedway%'
 ---------- Neu: Teams und Fahrer:
 -- Renault
    OR QUERY ILIKE '%Mild Seven Renault F1 Team%' 
@@ -190,6 +191,26 @@ WHERE (
    OR QUERY ILIKE '%Sakon Yamamoto%'
 
 ----------
+-- Strecken
+	OR QUERY ILIKE '%Bahrain International Circuit%'
+	OR QUERY ILIKE '%Sepang International Circuit%' 
+	OR QUERY ILIKE '%Albert Park Circuit%'
+	OR QUERY ILIKE '%Autodromo Enzo e Dino Ferrari%'
+	OR QUERY ILIKE '%N%rburg%ring%'
+	OR QUERY ILIKE '%Circuit de Catalunya%'
+	OR QUERY ILIKE '%Circuit de Monaco%'
+	OR QUERY ILIKE '%Silverstone Circuit%'
+	OR QUERY ILIKE '%Circuit Gilles Villeneuve%'
+	OR QUERY ILIKE '%Indianapolis Motor Speedway%'
+	OR QUERY ILIKE '%Circuit de Nevers Magny-Cours%'
+	OR QUERY ILIKE '%Hockenheim%ring%'
+	OR QUERY ILIKE '%Hungaro%ring%'
+	OR QUERY ILIKE '%Istanbul Park%'
+	OR QUERY ILIKE '%Autodromo Nazionale di Monza%'
+	OR QUERY ILIKE '%Shanghai International Circuit%'
+	OR QUERY ILIKE '%Suzuka Circuit%' 
+
+	
 
       -- F1-related websites
    OR CLICKURL LIKE 'http://www.formula1.com%'
@@ -209,6 +230,8 @@ WHERE (
    OR CLICKURL LIKE 'http://www.f1racefactory.com%'
    OR CLICKURL LIKE 'http://www.na-motorsports.com%'
    OR CLICKURL LIKE 'http://www.f1racing.net%'
+	
+
 
       -- Ambiguous terms only when paired with F1 context
    OR (
@@ -222,7 +245,7 @@ WHERE (
 		   OR QUERY ILIKE '%Malaysia%'
 		   OR QUERY ILIKE '%Australia%'
 		   OR QUERY ILIKE '%Imola%'
-		   OR QUERY ILIKE '%NÃ¼rburg%'
+		   OR QUERY ILIKE '%N%rburg%'
 		   OR QUERY ILIKE '%Spain%'
 		   OR QUERY ILIKE '%Monaco%'
 		)
@@ -260,4 +283,3 @@ AND CLICKURL NOT ILIKE '%golf%'
 AND CLICKURL NOT ILIKE '%plane%'
 AND CLICKURL NOT ILIKE '%fujifilm%'
 AND CLICKURL NOT ILIKE '%ebay%';
-
