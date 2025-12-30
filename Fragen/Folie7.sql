@@ -1,4 +1,4 @@
---Gibt es Nutzer, die von Formel 1 zu Tickets oder Reiseanfragen wechseln?
+-- Wie viele Nutzer machen Reiseanfragen vor dem nächsten F1-Rennen?
 
 WITH daily_queries AS (
     SELECT
