@@ -1,6 +1,6 @@
 -- Welche Rennfahrer Namen wurden am meisten gesucht?
 
-SELECT 
+SELECT
     f.fahrer_id,
     f.name AS fahrer_name,
     t.name AS team_name,

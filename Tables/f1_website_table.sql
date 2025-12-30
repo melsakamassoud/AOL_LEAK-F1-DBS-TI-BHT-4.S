@@ -14,4 +14,4 @@ JOIN website w
   ON f.clickurl = w.url;
 -- select * from website where 
 
-SELEct * from f1_website where url ilike '%formula1%';
+SELEct * from f1_website;

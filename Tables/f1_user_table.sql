@@ -4,3 +4,5 @@ CREATE TABLE f1_user (
 );
 
 INSERT INTO f1_user (anon_id) select distinct anon_id from f1_query;
+
+select * from f1_user;
