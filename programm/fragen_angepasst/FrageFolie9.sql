@@ -13,4 +13,4 @@ JOIN f1_query q
 WHERE l.website_id = 27001
 GROUP BY q.query_text
 ORDER BY query_count DESC
-Limit 60;
+LIMIT 30;

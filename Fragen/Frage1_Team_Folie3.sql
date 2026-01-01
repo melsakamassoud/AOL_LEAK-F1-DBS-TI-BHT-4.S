@@ -1,4 +1,5 @@
 -- Welche Teams bzw. Rennfahrer waren zu der Zeit aktiv?
+-- aktiv ja wissen wir, aber gesucht vielleicht
 
 SELECT 
     t.name AS team_name,
